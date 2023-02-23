@@ -29,4 +29,14 @@ keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 -- netrw
-keymap.set("n", "<leader>pv", ":Ex<CR>") --  go to previous tab
+keymap.set("n", "<leader>pv", ":Ex<CR>")
+
+-- find npm components
+vim.keymap.set('n', '<leader>sn', function ()
+    require('telescope.builtin').find_files({ cwd = 'node_modules'})
+end, { desc = '[S]earch [N]ode module' })
+
+-- find bower components
+vim.keymap.set('n', '<leader>sc', function ()
+    require('telescope.builtin').find_files({ cwd = 'components'})
+end, { desc = '[S]earch [C]omponents' })
