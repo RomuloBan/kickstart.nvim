@@ -40,3 +40,6 @@ end, { desc = '[S]earch [N]ode module' })
 vim.keymap.set('n', '<leader>sc', function ()
     require('telescope.builtin').find_files({ cwd = 'components'})
 end, { desc = '[S]earch [C]omponents' })
+
+-- terminal
+vim.keymap.set('t', '<esc>', "<C-\\><C-N>") -- escape terminal mode
