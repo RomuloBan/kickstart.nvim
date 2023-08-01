@@ -1,2 +1,1 @@
-vim.keymap.set("n", "<leader>et", ":NeoTreeShowToggle<CR>")
-vim.keymap.set("n", "<leader>ef", ":NeoTreeFloatToggle<CR>")
+vim.keymap.set("n", "<leader>et", ":Neotree toggle<CR>")
